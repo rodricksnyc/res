@@ -39,7 +39,7 @@ $(document).ready(function () {
 	});
 	$('[data-toggle="tooltip"]').tooltip({
 		container: 'body'
-		
+
 	}).on("show.bs.tooltip", function(e, ui){
 		console.log("tooltipopen", e, ui)
 	});
@@ -60,8 +60,8 @@ $(document).ready(function () {
 	});
 
 	$(window).scroll(function () {
-		((window.pageYOffset || document.documentElement.scrollTop) > 100) 
-			? $('.back-to-top').css({ opacity: 1, visibility: "visible" }) 
+		((window.pageYOffset || document.documentElement.scrollTop) > 100)
+			? $('.back-to-top').css({ opacity: 1, visibility: "visible" })
 			: $('.back-to-top').css({ opacity: 0, visibility: "hidden" });
 	});
 
@@ -138,17 +138,6 @@ $(document).ready(function () {
 		}
 	});
 
-
-
-	// $('.whiteBubble').on('mouseenter',function() {
-	// 	$(this).find('.rightBubble').hide()
-	// 	$(this).find('.new').show().css('display', 'flex')
-	// })
-
-	// $('.whiteBubble').on('mouseleave',function() {
-	// 	$(this).find('.rightBubble').show()
-	// 	$(this).find('.new').hide().css('display', 'none')
-	// })
 
 
 
@@ -353,68 +342,7 @@ $(document).ready(function () {
 
 	var bubbleSlide = function(){
 
-		if( $(this).hasClass('purple1')) {
 
-			$(this).closest('.whiteBubble').find('.slideThisDown').addClass('purpleSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('aquaSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('blueSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('salmonSlide')
-
-			$(this).closest('.whiteBubble').find('.slideThisDown p').html('Every child and youth in FS088 should be reported either in FS005 or FS006.')
-
-		}
-
-		if( $(this).hasClass('purple2')) {
-
-			$(this).closest('.whiteBubble').find('.slideThisDown').addClass('purpleSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('aquaSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('blueSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('salmonSlide')
-
-			$(this).closest('.whiteBubble').find('.slideThisDown p').html('Every child and youth reported in FS005 must have at least one removal in FS007.')
-
-		}
-
-
-		if( $(this).hasClass('aqua2')) {
-
-			$(this).closest('.whiteBubble').find('.slideThisDown').addClass('aquaSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('purpleSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('blueSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('salmonSlide')
-
-			$(this).closest('.whiteBubble').find('.slideThisDown p').html('Every child and youth in FS088 should be reported either in FS005 or FS006.')
-		}
-
-		if( $(this).hasClass('periwinkle')) {
-
-			$(this).closest('.whiteBubble').find('.slideThisDown').addClass('blueSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('purpleSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('aquaSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('salmonSlide')
-
-			$(this).closest('.whiteBubble').find('.slideThisDown p').html('Every child and youth counted in FS088 must have at least one removal counted in FS143.')
-		}
-
-		if( $(this).hasClass('salmon1')) {
-
-			$(this).closest('.whiteBubble').find('.slideThisDown').addClass('salmonSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('purpleSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('aquaSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('blueSlide')
-
-			$(this).closest('.whiteBubble').find('.slideThisDown p').html('Every child and youth with an expulsion in FS006 should be included in FS144.')
-		}
-
-		if( $(this).hasClass('salmon2')) {
-
-			$(this).closest('.whiteBubble').find('.slideThisDown').addClass('salmonSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('purpleSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('aquaSlide')
-			$(this).closest('.whiteBubble').find('.slideThisDown').removeClass('blueSlide')
-
-			$(this).closest('.whiteBubble').find('.slideThisDown p').html('Both students with disabilities and students without disabilities are included in FS144.')
-		}
 
 		if (!$(this).hasClass('showDiv')) {
 
@@ -471,7 +399,7 @@ $(document).ready(function () {
 		$('li.nav-item.active').removeClass('active');
 		$(this).addClass('active');
 	})
-	
+
 	function setModalTab(self){
 		var el;
 
@@ -545,13 +473,13 @@ $(document).ready(function () {
 	window.addEventListener('keydown', handleFirstTab);
 	window.addEventListener('click', function(){
 		removeTabClass();
-		window.addEventListener('keydown', handleFirstTab);	
+		window.addEventListener('keydown', handleFirstTab);
 	});
 
 	if (window.innerWidth < 421){
 		// alert("test");
 		$('.modal-content').css("max-height", window.innerHeight - 90 + "px");
-		
+
 		$(window).resize(function(){
 			$('.modal-content').css("max-height", window.innerHeight - 90 + "px");
 		});
